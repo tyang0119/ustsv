@@ -29,7 +29,7 @@ const Timer = () => {
         <div className="app">
             <div>
                 {seconds}s
-      </div>
+        </div>
             <div className="row">
                 <button className={`${isActive ? 'active' : 'inactive'}`} onClick={toggle}>
                     {isActive ? 'STOP' : 'START'}
