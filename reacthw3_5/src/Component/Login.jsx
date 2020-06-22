@@ -9,8 +9,7 @@ today = yyyy + mm + dd;
 let tomorrow = parseInt(today) + 1;
 let yesterday = parseInt(today) - 1;
 
-
-class Login extends Component {
+class Login extends React.Component {
     constructor() {
         super();
         this.state = {
@@ -34,7 +33,6 @@ class Login extends Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        console.log(this.state.data.length);
 
         if (!this.state.username) {
             return this.setState({ error: 'Username is required' });
