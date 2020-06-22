@@ -1,13 +1,23 @@
 import React, { Component } from 'react';
 
+let today = new Date();
+let dd = String(today.getDate()).padStart(2, '0');
+let mm = String(today.getMonth() + 1).padStart(2, '0');
+let yyyy = today.getFullYear();
+
+today = yyyy + mm + dd;
+let tomorrow = parseInt(today) + 1;
+let yesterday = parseInt(today) - 1;
+
+
 class Login extends Component {
     constructor() {
         super();
         this.state = {
             data: [
-                { user: 'today', PIN: '20180621' },
-                { user: 'tomorrow', PIN: '20180622' },
-                { user: 'yesterday', PIN: '20180620' },
+                { user: 'today', PIN: today },
+                { user: 'tomorrow', PIN: String(tomorrow) },
+                { user: 'yesterday', PIN: String(yesterday) },
             ],
 
             username: '',
